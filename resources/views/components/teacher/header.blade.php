@@ -1,11 +1,12 @@
 <header class="text-gray-600 body-font bg-blue-900">
   <div class="container mx-auto flex p-2 items-center justify-between relative">
     <a href="{{ route('teacher.top') }}" class="flex title-font font-medium items-center">
-      <img src="{{ asset('storage/images/logo.jpg') }}" alt="Logo" class="w-32 md:36 sm:w-48">
+      <x-icons.logo-blue />
+      <x-icons.logo-blue-sm />
     </a>
     <div class="relative flex items-center">
       <div class="ml-4 text-white">
-        <a href="{{ route('teacher.about') }}">家庭教師LMSとは</a>
+        <a href="{{ route('teacher.about') }}"><span class="hidden md:inline">家庭教師</span>LMSとは</a>
       </div>
       <p class="mx-4 text-white">|</p>
       <details class="group">

@@ -3,9 +3,9 @@
     <x-title subtitle="STUDENT LIST" title="担当生徒一覧" />
     @foreach($students as $student)
     @if (!$loop->last)
-    <div class="border-b-2 border-dashed w-full sm:px-8 pt-8 pb-16">
+    <div class="border-b-2 border-dashed w-80 sm:w-full sm:px-8 pt-8 pb-16">
       @else
-      <div class="w-full sm:px-16 py-16">
+      <div class="w-80 sm:w-full sm:px-8 py-16">
         @endif
         <x-heading name="{{ $studentNames[$student->id] }}" />
         <!-- table -->

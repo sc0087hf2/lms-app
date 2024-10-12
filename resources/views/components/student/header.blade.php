@@ -1,7 +1,8 @@
 <header class="text-gray-600 body-font bg-blue-900">
   <div class="container mx-auto flex p-2 items-center justify-between relative">
     <a href="{{ route('student.top') }}" class="flex title-font font-medium items-center">
-      <img src="{{ asset('storage/images/logo.jpg') }}" alt="Logo" class="w-32 md:36 sm:w-48">
+      <x-icons.logo-blue />
+      <x-icons.logo-blue-sm />
     </a>
     <div class="relative flex items-center">
       <details class="group">

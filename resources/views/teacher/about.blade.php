@@ -1,10 +1,10 @@
 <x-teacher-layout>
   <section class="mb-24">
     <x-title subtitle="ABOUT" title="家庭教師LMSについて" />
-    <p class="ml-8 mb-8 text-base sm:text-lg">家庭教師LMS（Learning Management System）とは、生徒の学習進捗を管理するシステムです。</p>
-    <div class="flex justify-center mb-12">
-      <img src="{{ asset('storage/images/main-visual.png') }}" alt="Logo" class="hidden sm:block sm:w-4/5">
-      <img src="{{ asset('storage/images/main-visual-sp.png') }}" alt="Logo" class="sm:hidden w-full">
+    <p class="ml-8 sm:mb-8 text-base sm:text-lg">家庭教師LMS（Learning Management System）とは、生徒の学習進捗を管理するシステムです。</p>
+    <div class="sm:ml-12 sm:mb-12">
+      <x-icons.goal-management />
+      <x-icons.goal-management-sm />
     </div>
     <div class="sm:mx-4">
       <h2 class="mb-2 font-bold text-base sm:text-xl"><span class="mr-2 text-yellow-500">①</span><strong class="bg-custom-gradient">目的の設定</strong></h2>
