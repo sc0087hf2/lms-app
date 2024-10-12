@@ -17,6 +17,10 @@ return new class extends Migration
                 ->constrained('lessons')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
+            $table->foreignId('todo_id')
+                ->constrained('todos')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->string('homework');
             $table->timestamps();
         });

@@ -21,7 +21,8 @@ return new class extends Migration
             $table->date('next_lesson_date');
             $table->string('lesson');
             $table->string('next_lesson');
-            $table->string('comment')->nullable();
+            $table->string('teacher_comment')->nullable();
+            $table->string('student_comment')->nullable();
             $table->timestamps();
         });
     }

@@ -21,7 +21,8 @@ return new class extends Migration
             $table->string('goal_background');
             $table->date('goal_deadline');
             $table->timestamp('achievement_date')->nullable();
-            $table->string('comment')->nullable();
+            $table->string('teacher_comment')->nullable();
+            $table->string('student_comment')->nullable();
             $table->timestamps();
         });
     }
