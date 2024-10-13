@@ -19,7 +19,7 @@
         @endif
         <x-heading name="授業日  {{ \Carbon\Carbon::parse($lesson->lesson_date)->format('n月j日') }}" />
         <!-- table -->
-        <div class="max-w-4xl mx-auto px-4">
+        <div class="max-w-4xl mx-auto px-4 py-2">
           <div class="grid grid-cols-1 md:grid-cols-3">
             <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">授業日</div>
             <div class="col-span-2 border border-gray-300 p-4 sm:p-8">{{ \Carbon\Carbon::parse($lesson->lesson_date)->format('n月j日') }}</div>
@@ -36,7 +36,7 @@
               </ul>
             </div>
             <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">コメント</div>
-            <div class="col-span-2 border border-gray-300 p-4 sm:p-8">{{ $lesson->comment }}</div>
+            <div class="col-span-2 border border-gray-300 p-4 sm:p-8">{{ $lesson->teacher_comment }}</div>
           </div>
         </div>
       </div>

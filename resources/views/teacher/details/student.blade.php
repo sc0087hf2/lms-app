@@ -5,7 +5,7 @@
       <x-breadcrumb-list-last name="{{ $studentName }} " />
     </ol>
   </nav>
-
+  <h1 class="my-16 p-4 text-center text-blue-500 text-2xl sm:text-4xl font-bold"><span class="border-b-4 border-gray-200">{{ $studentName }} 詳細</span></h1>
   <section class="mb-24">
     <x-title subtitle="CURRENT EFFORT" title="{{ $studentName }} 現在の取り組み" />
     <!-- 目標 -->

@@ -1,9 +1,10 @@
 <x-teacher-layout>
+  <h1 class="my-16 p-4 text-center text-blue-500 text-2xl sm:text-4xl font-bold"><span class="border-b-4 border-gray-200">ようこそ {{ Auth::user()->last_name }} {{ Auth::user()->first_name }}さん</span></h1>
   <section class="sm:w-192">
     <x-title subtitle="STUDENT LIST" title="担当生徒一覧" />
     @foreach($students as $student)
     @if (!$loop->last)
-    <div class="border-b-2 border-dashed w-80 sm:w-full sm:px-8 pt-8 pb-16">
+    <div class="border-b-2 border-dashed w-80 sm:w-full sm:px-8 pb-16">
       @else
       <div class="w-80 sm:w-full sm:px-8 py-16">
         @endif

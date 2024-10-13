@@ -9,7 +9,7 @@
       </ol>
     </nav>
     <div class="flex sm:justify-between">
-      <x-title subtitle="LIST OF HOMEWORK" title="宿題一覧" />
+      <x-title subtitle="HOMEWORK LIST" title="宿題一覧" />
       <x-add-button href="{{ route('teacher.homework.create') }}" name="宿題" />
     </div>
     <!-- table -->

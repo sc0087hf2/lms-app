@@ -7,9 +7,9 @@
           <span class="ml-3">ホーム</span>
         </a>
       <li>
-        <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg cursor-pointer hover:bg-gray-300 group-focus:outline-none">
+        <a href="{{ route('teacher.goals.index') }}" class="flex items-center p-2 text-gray-900 rounded-lg cursor-pointer hover:bg-gray-300 group-focus:outline-none">
           <x-icons.goal size="20px" />
-          <span class="ml-3">目標</span>
+          <span class="ml-3">目標一覧</span>
         </a>
       </li>
       <li>
@@ -30,7 +30,7 @@
       <li>
         <a href="{{ route('teacher.lessons.index') }}" class="flex items-center p-2 text-gray-900 rounded-lg cursor-pointer hover:bg-gray-300 group-focus:outline-none">
           <x-icons.lesson size="20px" />
-          <span class="ml-3">授業</span>
+          <span class="ml-3">授業一覧</span>
         </a>
       </li>
       <li>
@@ -47,6 +47,14 @@
             <li><a href="{{ route('teacher.homework.create') }}" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-300">宿題追加</a></li>
           </ul>
         </details>
+      </li>
+      <li>
+        <form method="POST" action="{{ route('logout') }}">
+          @csrf
+          <button type="submit" class="w-full text-left flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-300">
+            ログアウト
+          </button>
+        </form>
       </li>
     </ul>
   </div>

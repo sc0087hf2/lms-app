@@ -48,6 +48,14 @@
           </ul>
         </details>
       </li>
+      <li>
+        <form method="POST" action="{{ route('logout') }}">
+          @csrf
+          <button type="submit" class="w-full text-left flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-300">
+            ログアウト
+          </button>
+        </form>
+      </li>
     </ul>
   </div>
 </aside>

@@ -1,5 +1,5 @@
 <div class="">
-  <div class="relative h-10 sm:h-12 sm:mb-6">
+  <div class="relative h-10 sm:h-12 mb-2 sm:mb-6">
     <div class="absolute w-56 h-10 sm:h-12 bg-white border-2 border-blue-500 rounded-full z-10 flex justify-center items-center">
       <p class="font-bold text-base sm:text-lg text-gray-900">{{ $name }}</p>
     </div>
