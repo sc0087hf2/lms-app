@@ -18,7 +18,7 @@
         @endif
         <x-heading name="授業日  {{ \Carbon\Carbon::parse($lesson->lesson_date)->format('n月j日') }}" />
         <!-- table -->
-        <div class="max-w-4xl mx-auto px-4">
+        <div class="max-w-4xl mx-auto px-4 py-2">
           <div class="grid grid-cols-1 md:grid-cols-3">
             <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">授業日</div>
             <div class="col-span-2 border border-gray-300 p-4 sm:p-8">{{ \Carbon\Carbon::parse($lesson->lesson_date)->format('n月j日') }}</div>
@@ -27,25 +27,23 @@
             <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">宿題</div>
             <div class="col-span-2 border border-gray-300 p-4 sm:p-8">
               <ul>
-                @if(isset($homework))
-                @foreach($homework as $work)
-                <li></li>
+                @foreach($homework[$lesson->id] as $work)
+                <li class="mb-2">・ {{ $work->homework }}</li>
                 @endforeach
-                @endif
               </ul>
             </div>
             <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">指導者より</div>
             <div class="col-span-2 border border-gray-300 p-4 sm:p-8">{{ $lesson->teacher_comment }}</div>
-            <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">自己フィードバック</div>
+            <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">振り返り</div>
             <div class="col-span-2 border border-gray-300 p-4 sm:p-8">{{ $lesson->student_comment }}</div>
           </div>
         </div>
         <div class="container mt-2 px-5 py-4 mx-auto">
           <div class="flex flex-wrap justify-center -m-2">
             @if($lesson->student_comment)
-            <x-page-transition name="フィードバックを編集する" href="{{ route('student.comments.editLessonComment', ['lessonId' => $lesson->id]) }}" />
+            <x-page-transition name="振り返りを編集する" href="{{ route('student.comments.editLessonComment', ['lessonId' => $lesson->id]) }}" />
             @else
-            <x-page-transition name="フィードバックする" href="{{ route('student.comments.addLessonComment', ['lessonId' => $lesson->id]) }}" />
+            <x-page-transition name="振り返りする" href="{{ route('student.comments.addLessonComment', ['lessonId' => $lesson->id]) }}" />
             @endif
           </div>
         </div>

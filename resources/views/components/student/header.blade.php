@@ -6,7 +6,7 @@
     </a>
     <div class="relative flex items-center">
       <div class="mr-4 text-white">
-        <a href="#">家庭教師LMSについて</a>
+        <a href="{{ route('student.about') }}">家庭教師LMSについて</a>
       </div>
       <button id="hamburger-button" class="ml-2 p-2 sm:p-3 text-blue-900 bg-gray-200 rounded-lg focus:outline-none">
         <svg class="w-5 sm:w-6 h-5 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

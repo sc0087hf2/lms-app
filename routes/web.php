@@ -162,14 +162,21 @@ Route::prefix('teacher')->middleware(['auth', 'teacher'])->name('teacher.')->gro
     });
 });
 
-//管理者権限ページ
+//生徒権限ページ
 Route::prefix('student')->middleware(['auth', 'student'])->name('student.')->group(function () {
     Route::prefix('')->controller(StudentPageController::class)->group(function () {
+        //生徒トップ
         Route::get('', 'top')->name('top');
+        //目標・進捗管理ページ
         Route::get('{studentId}/progress', 'showProgress')->name('progress');
+        //過去授業一覧ページ
         Route::get('{studentId}/lessons', 'showLessons')->name('lessons');
+        //動画ページ
         Route::get('movie', 'movie')->name('movie');
+        //作成中謝罪ページ
         Route::get('sorry', 'sorry')->name('sorry');
+        //このアプリについて
+        Route::get('about', 'about')->name('about');
     });
 
     //コメント処理

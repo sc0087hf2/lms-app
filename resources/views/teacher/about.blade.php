@@ -1,4 +1,10 @@
 <x-teacher-layout>
+  <nav class="flex mt-2 mb-4 sm:mb-8" aria-label="Breadcrumb">
+    <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+      <x-breadcrumb-list-home href="{{ route('teacher.top') }}" />
+      <x-breadcrumb-list-last name="家庭教師LMS" />
+    </ol>
+  </nav>
   <h1 class="my-16 p-4 text-center text-blue-500 text-2xl sm:text-4xl font-bold"><span class="border-b-4 border-gray-200">家庭教師LMS</span></h1>
   <section class="mb-24">
     <x-title subtitle="ABOUT" title="家庭教師LMSについて" />

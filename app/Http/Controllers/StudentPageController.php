@@ -13,15 +13,15 @@ class StudentPageController extends Controller
      */
     public function top()
     {
-        $student = Student::with('user')->where('user_id', Auth::user()->id)->first();
+        $student     = Student::with('user')->where('user_id', Auth::user()->id)->first();
         $studentInfo = $student->user;
         if ($student->getLatestLesson() === null) {
             return view('student.top', compact(['studentInfo', 'student']));
         }
-        $lesson = $student->getLatestLesson();
+        $lesson   = $student->getLatestLesson();
         $homework = $lesson->homework;
         if (isset($student->getNonAchievementGoal)) {
-            $goal = $student->getNonAchievementGoal;
+            $goal  = $student->getNonAchievementGoal;
             $todos = $student->getNonAchievementGoal->todos;
             return view('student.top', compact(['studentInfo', 'student', 'goal', 'todos', 'lesson', 'homework']));
         }
@@ -33,10 +33,10 @@ class StudentPageController extends Controller
      */
     public function showProgress(int $studentId)
     {
-        $student = Student::with('user', 'goals.todos')->findOrFail($studentId);
+        $student     = Student::with('user', 'goals.todos')->findOrFail($studentId);
         $studentName = $student->user->last_name . $student->user->first_name;
-        $goals = $student->goals()->orderBy('created_at', 'desc')->paginate(5);
-        $todos = [];
+        $goals       = $student->goals()->orderBy('created_at', 'desc')->paginate(5);
+        $todos       = [];
         foreach ($goals as $goal) {
             $todos[$goal->id] = $goal->todos ? $goal->todos : [];
         }
@@ -48,11 +48,11 @@ class StudentPageController extends Controller
      */
     public function showLessons(int $studentId)
     {
-        $student = Student::with('user', 'lessons.homework')->findOrFail($studentId);
-        $studentId = $student->id;
+        $student     = Student::with('user', 'lessons.homework')->findOrFail($studentId);
+        $studentId   = $student->id;
         $studentName = $student->user->last_name . ' ' . $student->user->first_name;
-        $lessons = $student->lessons()->orderBy('next_lesson_date', 'desc')->paginate(5);
-        $homework = [];
+        $lessons     = $student->lessons()->orderBy('next_lesson_date', 'desc')->paginate(5);
+        $homework    = [];
         foreach ($lessons as $lesson) {
             $homework[$lesson->id] = $lesson->homework;
         }
@@ -71,9 +71,15 @@ class StudentPageController extends Controller
         return view('student.movie');
     }
 
-    //作成中画面
+    //作成中画面表示
     public function sorry()
     {
         return view('student.sorry');
+    }
+
+    //アプリ説明画面表示
+    public function about()
+    {
+        return view('student.about');
     }
 }
