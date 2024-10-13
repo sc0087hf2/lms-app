@@ -14,7 +14,7 @@
       </li>
       <li>
         <details class="group">
-          <summary class="flex items-center p-2 text-gray-900 rounded-lg cursor-pointer hover:bg-gray-300 group-focus:outline-none">
+          <summary class="flex items-center p-2 text-gray-900 rounded-lg cursor-pointer hover:bg-gray-300 group-focus:outline-none list-none">
             <x-icons.todo size="20px" />
             <span class="ms-3">ToDo</span>
             <svg class="w-3 h-3 ml-auto transition-transform duration-300 group-open:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -35,7 +35,7 @@
       </li>
       <li>
         <details class="group">
-          <summary class="flex items-center p-2 text-gray-900 rounded-lg cursor-pointer hover:bg-gray-300 group-focus:outline-none">
+          <summary class="flex items-center p-2 text-gray-900 rounded-lg cursor-pointer hover:bg-gray-300 group-focus:outline-none list-none">
             <x-icons.homework size="20px" />
             <span class="ms-3">宿題</span>
             <svg class="w-3 h-3 ml-auto transition-transform duration-300 group-open:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">

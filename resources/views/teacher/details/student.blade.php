@@ -13,7 +13,7 @@
       <x-heading name="現在取り組んでいる目標" />
       @if(isset($goal))
       <h2 class="text-center text-xl sm:text-2xl mt-8 mb-4 sm:mt-16"><strong class="bg-custom-gradient">{{ $goal->goal }}</strong></h2>
-      <p class="text-center mb-16">（ 期限：{{ \Carbon\Carbon::parse($goal->goal_deadline)->format('n月j日') }} ）</p>
+      <p class="text-center mb-8 sm:mb-16">（ 期限：{{ \Carbon\Carbon::parse($goal->goal_deadline)->format('n月j日') }} ）</p>
       @else
       <h2 class="text-center text-xl sm:text-2xl mt-8 mb-16 sm:my-16 ">現在取り組んでいる目標はありません。<br />目標を追加してください。</h2>
       @endif
@@ -21,9 +21,12 @@
         <a href="{{ route('teacher.progress', ['studentId' => $studentId]) }}" class="text-blue-900 font-bold">過去の取り組みを見る　→</a>
       </div>
     </div>
+    <div class="flex justify-center items-center mb-16">
+      <x-icons.direction />
+    </div>
     <!-- ToDo -->
     @if(isset($todos))
-    <div class="relative bg-custom-blue flex flex-col justify-center items-center mb-16 text-lg">
+    <div class="relative sm:bg-custom-blue flex flex-col justify-center items-center mb-8 sm:mb-16 text-lg">
       <x-icons.bg-top />
       <div class="w-full pt-12 sm:p-8 text-left">
         <x-heading name="ToDoリスト" />
@@ -38,8 +41,10 @@
             <ul class="list-disc pl-5">
               @foreach($todos as $todo)
               @if($todo->is_achievement === 1)
-              <li class="mb-2 flex">
-                <img src="{{ asset('storage/images/checkbox.png') }}" alt="" class="mr-2 mb-2 w-4 h-5">
+              <li class="mb-4 flex">
+                <div>
+                  <x-icons.checkbox />
+                </div>
                 <p class="font-bold text-base">{{ $todo->todo }}</p>
               </li>
               @endif
@@ -53,8 +58,10 @@
             <ul class="list-disc pl-5">
               @foreach($todos as $todo)
               @if($todo->is_achievement === 0)
-              <li class="mb-2 flex">
-                <img src="{{ asset('storage/images/box.png') }}" alt="" class="mr-3 mt-2 w-3 h-3">
+              <li class="mb-4 flex">
+                <div>
+                  <x-icons.box />
+                </div>
                 <p class="font-bold text-base">{{ $todo->todo }}</p>
               </li>
               @endif
@@ -66,10 +73,14 @@
       </div>
       <x-icons.bg-bottom />
     </div>
+    <div class="flex justify-center items-center mb-16">
+      <x-icons.direction />
+    </div>
+
     @endif
     <!-- 宿題 -->
     <div class="py-8 sm:p-8">
-      <x-heading name="次の宿題" />
+      <x-heading name="次の予定" />
       <div class="max-w-4xl mx-auto p-4">
         <div class="grid grid-cols-1 md:grid-cols-7">
           @if(isset($lesson))
@@ -115,8 +126,11 @@
     </div>
 
     @if(isset($lesson))
+    <div class="flex justify-center items-center mb-16">
+      <x-icons.direction />
+    </div>
     <!-- フィードバック -->
-    <div class="relative bg-custom-blue flex flex-col justify-center items-center text-lg">
+    <div class="relative sm:bg-custom-blue flex flex-col justify-center items-center text-lg">
       <x-icons.bg-top />
       <div class="w-full pt-12 sm:p-8 text-left">
         <x-heading name="{{ \Carbon\Carbon::parse($lesson->lesson_date)->format('n月j日') }}の授業フィードバック" />

@@ -7,7 +7,7 @@
     <div class="h-full flex items-center bg-yellow-500 rounded-lg group hover:bg-white hover:border border-yellow-500">
       <button
         type="submit"
-        class="flex justify-between items-center w-full p-4">
+        class="flex justify-between items-center w-full p-2 sm:p-4">
         <p class="text-white title-font text-center w-full group-hover:text-yellow-500">取り組み終了</p>
       </button>
     </div>

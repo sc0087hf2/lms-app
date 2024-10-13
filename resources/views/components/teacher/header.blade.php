@@ -10,7 +10,7 @@
       </div>
       <p class="mx-4 text-white">|</p>
       <details class="group">
-        <summary class="flex items-center p-2 text-white cursor-pointer group-focus:outline-none">
+        <summary class="flex items-center p-2 text-white cursor-pointer group-focus:outline-none list-none">
           <p class="mr-2"><span class="hidden md:inline">ようこそ </span>{{ Auth::user()->last_name }} {{ Auth::user()->first_name }}さん</p>
           <svg class="w-3 h-3 ml-auto transition-transform duration-300 group-open:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
