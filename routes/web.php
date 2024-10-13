@@ -93,14 +93,21 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
 Route::prefix('teacher')->middleware(['auth', 'teacher'])->name('teacher.')->group(function () {
     //先生ページ管理
     Route::prefix('')->controller(TeacherPageController::class)->group(function () {
+        //先生トップ
         Route::get('', 'top')->name('top');
+        //このアプリについて
         Route::get('about-app', 'about')->name('about');
+        //生徒トップ
         Route::get('{studentId}/progress', 'showStudentProgress')->name('progress');
-        //生徒トップページ
+        //目標・進捗管理一覧
         Route::get('{studentId}/show-goal-process', 'showGoalProcess')->name('showGoalProcessForStudent');
+        //授業一覧
         Route::get('{studentId}/lessons', 'showLessonsForStudent')->name('showLessonsForStudent');
+        //生徒個人情報
         Route::get('{studentId}/student-info', 'showStudentInfo')->name('showStudentInfo');
+        //生徒個人情報編集
         Route::get('{studentId}/edit-student-info', 'editStudentInfo')->name('editStudentInfo');
+        //生徒個人情報更新
         ROute::post('{studentId}/update-student-info', 'updateStudentInfo')->name('updateStudentInfo');
     });
 

@@ -28,15 +28,15 @@
             <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">宿題</div>
             <div class="col-span-2 border border-gray-300 p-4 sm:p-8">
               <ul>
-                @if(isset($homework))
-                @foreach($homework as $work)
-                <li></li>
+                @foreach($homework[$lesson->id] as $work)
+                <li class="mb-2">・ {{ $work->homework }}</li>
                 @endforeach
-                @endif
               </ul>
             </div>
-            <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">コメント</div>
+            <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">指導者コメント</div>
             <div class="col-span-2 border border-gray-300 p-4 sm:p-8">{{ $lesson->teacher_comment }}</div>
+            <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">生徒コメント</div>
+            <div class="col-span-2 border border-gray-300 p-4 sm:p-8">{{ $lesson->student_comment }}</div>
           </div>
         </div>
       </div>

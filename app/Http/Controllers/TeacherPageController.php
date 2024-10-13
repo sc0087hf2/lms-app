@@ -79,11 +79,11 @@ class TeacherPageController extends Controller
      */
     public function showStudentProgress(int $studentId)
     {
-        $student = Student::with('user', 'goals.todos')->findOrFail($studentId);
-        $studentId = $student->id;
+        $student     = Student::with('user', 'goals.todos')->findOrFail($studentId);
+        $studentId   = $student->id;
         $studentName = $student->user->last_name . $student->user->first_name;
-        $goals = $student->goals->sortByDesc('created_at');
-        $todos = [];
+        $goals       = $student->goals->sortByDesc('created_at');
+        $todos       = [];
         foreach ($goals as $goal) {
             $todos[$goal->id] = $goal->todos ? $goal->todos : [];
         }
@@ -95,11 +95,11 @@ class TeacherPageController extends Controller
      */
     public function showLessonsForStudent(int $studentId)
     {
-        $student = Student::with('user', 'lessons.homework')->findOrFail($studentId);
-        $studentId = $student->id;
+        $student     = Student::with('user', 'lessons.homework')->findOrFail($studentId);
+        $studentId   = $student->id;
         $studentName = $student->user->last_name . ' ' . $student->user->first_name;
-        $lessons = $student->lessons;
-        $homework = [];
+        $lessons     = $student->lessons->sortByDesc('lesson_date');
+        $homework    = [];
         foreach ($lessons as $lesson) {
             $homework[$lesson->id] = $lesson->homework;
         }
@@ -111,7 +111,7 @@ class TeacherPageController extends Controller
      */
     public function showStudentInfo(int $studentId)
     {
-        $student = Student::with(['user', 'teacher.user'])->findOrFail($studentId);
+        $student     = Student::with(['user', 'teacher.user'])->findOrFail($studentId);
         $studentName = $student->user->last_name . ' ' . $student->user->first_name;
         $teacherName = $student->teacher->user->last_name . ' ' . $student->teacher->user->first_name;
         return view('teacher.details.student-info', compact('studentName', 'student', 'teacherName'));
@@ -122,7 +122,7 @@ class TeacherPageController extends Controller
      */
     public function editStudentInfo(int $studentId)
     {
-        $student = Student::with('user')->findOrFail($studentId);
+        $student     = Student::with('user')->findOrFail($studentId);
         $studentName = $student->user->last_name . ' ' . $student->user->first_name;
         return view('teacher.details.edit-student-info', compact('student', 'studentName'));
     }
@@ -133,10 +133,10 @@ class TeacherPageController extends Controller
     public function updateStudentInfo(UpdateStudentInfoRequest $request, int $studentId)
     {
         $student = Student::findOrFail($studentId);
-        $student->guardian = $request->guardian;
-        $student->phone_number = $request->phone_number;
-        $student->school = $request->school;
-        $student->school_year = $request->school_year;
+        $student->guardian       = $request->guardian;
+        $student->phone_number   = $request->phone_number;
+        $student->school         = $request->school;
+        $student->school_year    = $request->school_year;
         $student->desired_school = $request->desired_school;
         $student->save();
         return redirect()->route('teacher.showStudentInfo', [
