@@ -22,23 +22,23 @@
               <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">取り組み状況</div>
               @if($goal->achievement_date)
               @if($goal->goal_deadline > $goal->achievement_date)
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8">取り組み達成（テスト待ち）</div>
+              <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">取り組み達成（テスト待ち）</div>
               @else
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8">取り組み達成</div>
+              <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">取り組み達成</div>
               @endif
               @else
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8">取り組み中</div>
+              <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">取り組み中</div>
               @endif
               <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">目標背景</div>
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8">{{ $goal->goal_background }}</div>
+              <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">{{ $goal->goal_background }}</div>
               <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">取り組み開始日</div>
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8">{{ \Carbon\Carbon::parse($goal->created_at)->format('Y月n月j日') }}</div>
+              <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">{{ \Carbon\Carbon::parse($goal->created_at)->format('Y月n月j日') }}</div>
               @if($goal->achievement_date)
               <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">取り組み達成日</div>
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8">{{ \Carbon\Carbon::parse($goal->achievement_date)->format('Y月n月j日') }}</div>
+              <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">{{ \Carbon\Carbon::parse($goal->achievement_date)->format('Y月n月j日') }}</div>
               @endif
               <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">達成済みToDo</div>
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8">
+              <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">
                 <ul>
                   @foreach($todos[$goal->id] as $todo)
                   @if($todo->is_achievement === 1)
@@ -46,7 +46,7 @@
                     <div>
                       <x-icons.checkbox />
                     </div>
-                    <p class="font-bold text-base">{{ $todo->todo }}</p>
+                    <p class="text-base font-normal">{{ $todo->todo }}</p>
                   </li>
                   @endif
                   @endforeach
@@ -61,16 +61,16 @@
                     <div>
                       <x-icons.box />
                     </div>
-                    <p class="font-bold text-base">{{ $todo->todo }}</p>
+                    <p class="text-base font-normal">{{ $todo->todo }}</p>
                   </li>
                   @endif
                   @endforeach
                 </ul>
               </div>
               <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">取り組みの振り返り（指導者）</div>
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8">{{ $goal->teacher_comment }}</div>
+              <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">{{ $goal->teacher_comment }}</div>
               <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">取り組みの振り返り（生徒）</div>
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8">{{ $goal->student_comment }}</div>
+              <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">{{ $goal->student_comment }}</div>
             </div>
           </div>
           <!-- button -->
