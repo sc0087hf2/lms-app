@@ -13,7 +13,7 @@
     <!-- 検索ロゴ -->
     <div class="mt-8">
       <div class="flex mb-2">
-        <x-icons.words />
+        <x-icons.words size="40" />
         <p class="font-bold flex items-center ml-4">単語を探す</p>
       </div>
     </div>

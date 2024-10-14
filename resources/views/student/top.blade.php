@@ -144,7 +144,7 @@
     @endif
   </section>
   <section class="mb-16">
-    <x-title subtitle="Learning Contents List" title="学習コンテンツ一覧" />
+    <x-title subtitle="CONTENTS LIST" title="コンテンツ一覧" />
     <div class="sm:mx-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 sm:mx-4">
         <a href="{{ route('student.progress', ['studentId' => $student->id]) }}" class="block border-2 border-gray-200 p-8 font-bold rounded-lg shadow-lg flex flex-col items-center justify-center hover:bg-blue-100 hover:border-blue-500 hover:shadow-xl transition duration-300">

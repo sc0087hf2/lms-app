@@ -1,4 +1,4 @@
-<svg width="40" height="40" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="{{ $size }}" height="{{ $size }}" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <circle cx="37.5" cy="37.5" r="37.5" fill="#EDEDED" />
   <rect x="16" y="15" width="44" height="44" fill="url(#pattern0_1159_24)" />
   <defs>
