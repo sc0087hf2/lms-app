@@ -40,30 +40,17 @@ class LessonController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function createLessonHomework(int $studentId)
-    {
-        $todos = Todo::where('is_achievement', '!=', 1)
-            ->whereHas('goal', function ($query) use ($studentId) {
-                $query->where('student_id', $studentId);
-            })
-            ->get();
-        return view('teacher.lessons.create-lesson-homework', compact('studentId', 'todos'));
-    }
-
-    /**
      * Store a newly created resource in storage.
      */
     public function store(StoreLessonRequest $request)
     {
         $lesson = new Lesson();
-        $lesson->student_id = $request->student_id;
-        $lesson->lesson_date = $request->lesson_date;
+        $lesson->student_id       = $request->student_id;
+        $lesson->lesson_date      = $request->lesson_date;
         $lesson->next_lesson_date = $request->next_lesson_date;
-        $lesson->lesson = $request->lesson;
-        $lesson->next_lesson = $request->next_lesson;
-        $lesson->teacher_comment = $request->teacher_comment;
+        $lesson->lesson           = $request->lesson;
+        $lesson->next_lesson      = $request->next_lesson;
+        $lesson->teacher_comment  = $request->teacher_comment;
         $lesson->save();
         return redirect()->route('teacher.showGoalProcessForStudent', [
             'studentId' => $lesson->student_id,
