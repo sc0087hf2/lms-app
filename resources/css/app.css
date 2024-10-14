@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Safariで表示されるデフォルトの三角形アイコンを消します */
+summary::-webkit-details-marker {
+  display: none; 
+}

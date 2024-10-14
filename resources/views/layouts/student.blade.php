@@ -32,42 +32,6 @@
     <div id="overlay" class="fixed inset-0 bg-black opacity-50 z-40 hidden"></div>
   </div>
   @include('components.student.footer')
-  <!-- JavaScript -->
-  <script>
-    // sidebar
-    document.getElementById('hamburger-button').addEventListener('click', function() {
-      const sidebar = document.getElementById('sidebar');
-      const overlay = document.getElementById('overlay');
-      if (sidebar.classList.contains('-translate-x-full')) {
-        sidebar.classList.remove('-translate-x-full');
-        sidebar.classList.add('translate-x-0');
-        overlay.classList.remove('hidden');
-      } else {
-        sidebar.classList.add('-translate-x-full');
-        sidebar.classList.remove('translate-x-0');
-        overlay.classList.add('hidden');
-      }
-    });
-
-    document.getElementById('overlay').addEventListener('click', function() {
-      const sidebar = document.getElementById('sidebar');
-      const overlay = document.getElementById('overlay');
-      sidebar.classList.add('-translate-x-full');
-      sidebar.classList.remove('translate-x-0');
-      overlay.classList.add('hidden');
-    });
-
-    //header
-    document.addEventListener('click', function(event) {
-      const detailsElement = document.querySelector('details');
-      const summaryElement = document.querySelector('summary');
-
-      if (detailsElement.hasAttribute('open') && !detailsElement.contains(event.target)) {
-        detailsElement.removeAttribute('open');
-      }
-    });
-  </script>
-
 </body>
 
 </html>
