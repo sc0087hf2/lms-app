@@ -40,7 +40,7 @@
                   @foreach($todos[$goal->id] as $todo)
                   @if($todo->is_achievement === 1)
                   <li class="mb-2 flex">
-                    <img src="{{ asset('storage/images/checkbox.png') }}" alt="" class="mr-2 mb-1 w-5 h-6">
+                    <x-icons.checkbox />
                     <p class="font-bold text-base">{{ $todo->todo }}</p>
                   </li>
                   @endif
@@ -53,7 +53,7 @@
                   @foreach($todos[$goal->id] as $todo)
                   @if($todo->is_achievement !== 1)
                   <li class="mb-2 flex">
-                    <img src="{{ asset('storage/images/box.png') }}" alt="" class="mr-2 mt-1 w-4 h-4">
+                    <x-icons.box />
                     <p class="font-bold text-base">{{ $todo->todo }}</p>
                   </li>
                   @endif
