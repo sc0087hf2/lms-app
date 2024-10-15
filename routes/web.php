@@ -16,10 +16,11 @@ use App\Http\Controllers\TeacherPageController;
 use App\Http\Controllers\TodoController;
 use App\Http\Controllers\WordController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
-    return redirect()->route('login');
-});
+    return view('about');
+})->name('top');
 
 require __DIR__ . '/auth.php';
 
