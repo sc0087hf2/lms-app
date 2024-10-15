@@ -8,8 +8,8 @@
         <x-breadcrumb-list-last name="目標編集" />
       </ol>
     </nav>
-    <div class="sm:ml-12">
-      <x-title subtitle="EDIT GOAL" title="目標の編集" />
+    <div class="flex flex-col text-center w-full mb-4">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">目標　編集</h1>
     </div>
     <div class="container px-5 pb-8 mx-auto">
       <div class="w-full md:w-4/5 mx-auto">

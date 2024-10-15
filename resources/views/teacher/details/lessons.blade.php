@@ -9,7 +9,7 @@
   </nav>
 
   <section class="w-80 sm:w-176 mx-auto">
-    <x-title subtitle="LIST OF LESSONS" title="{{ $studentName }} 授業一覧" />
+    <h1 class="my-16 p-4 text-center text-blue-500 text-2xl sm:text-4xl font-bold"><span class="border-b-4 border-gray-200">{{ $studentName }} 授業一覧</span></h1>
     @if(isset($lessons))
     @foreach($lessons as $lesson)
     @if(!$loop->last)
@@ -19,24 +19,24 @@
         @endif
         <x-heading name="授業日  {{ \Carbon\Carbon::parse($lesson->lesson_date)->format('n月j日') }}" />
         <!-- table -->
-        <div class="max-w-4xl mx-auto px-4 py-2">
+        <div class="max-w-4xl mx-auto py-4">
           <div class="grid grid-cols-1 md:grid-cols-3">
-            <div class="col-span-1 border border-gray-300 p-2 sm:p-8 bg-custom-blue font-bold">授業日</div>
-            <div class="col-span-2 border border-gray-300 p-2 sm:p-8 font-normal">{{ \Carbon\Carbon::parse($lesson->lesson_date)->format('n月j日') }}</div>
-            <div class="col-span-1 border border-gray-300 p-2 sm:p-8 bg-custom-blue font-bold">授業内容</div>
-            <div class="col-span-2 border border-gray-300 p-2 sm:p-8 font-normal">{{ $lesson->lesson }}</div>
-            <div class="col-span-1 border border-gray-300 p-2 sm:p-8 bg-custom-blue font-bold">宿題</div>
-            <div class="col-span-2 border border-gray-300 p-2 sm:p-8">
+            <div class="col-span-1 border border-gray-300 p-2 sm:p-6 bg-custom-blue font-bold">授業日</div>
+            <div class="col-span-2 border border-gray-300 p-2 sm:p-6 font-normal">{{ \Carbon\Carbon::parse($lesson->lesson_date)->format('n月j日') }}</div>
+            <div class="col-span-1 border border-gray-300 p-2 sm:p-6 bg-custom-blue font-bold">授業内容</div>
+            <div class="col-span-2 border border-gray-300 p-2 sm:p-6 font-normal">{{ $lesson->lesson }}</div>
+            <div class="col-span-1 border border-gray-300 p-2 sm:p-6 bg-custom-blue font-bold">宿題</div>
+            <div class="col-span-2 border border-gray-300 p-2 sm:p-6">
               <ul>
                 @foreach($homework[$lesson->id] as $work)
                 <li class="mb-2 font-normal">・ {{ $work->homework }}</li>
                 @endforeach
               </ul>
             </div>
-            <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">指導者コメント</div>
-            <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">{{ $lesson->teacher_comment }}</div>
-            <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">生徒コメント</div>
-            <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">{{ $lesson->student_comment }}</div>
+            <div class="col-span-1 border border-gray-300 p-2 sm:p-6 bg-custom-blue font-bold">指導者コメント</div>
+            <div class="col-span-2 border border-gray-300 p-2 sm:p-6 font-normal">{{ $lesson->teacher_comment }}</div>
+            <div class="col-span-1 border border-gray-300 p-2 sm:p-6 bg-custom-blue font-bold">生徒コメント</div>
+            <div class="col-span-2 border border-gray-300 p-2 sm:p-6 font-normal">{{ $lesson->student_comment }}</div>
           </div>
         </div>
       </div>

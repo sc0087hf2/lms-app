@@ -94,7 +94,7 @@
               @endif
             </ul>
           </div>
-          <div class="col-span-2 border border-gray-300 p-4 sm:p-6 bg-custom-blue font-bold">宿題背景</div>
+          <div class="col-span-2 border border-gray-300 p-4 sm:p-6 bg-custom-blue font-bold">関連ToDo</div>
           <div class="col-span-5 border border-gray-300 p-4 sm:p-6">現在進行形の問題をすべて正確に解き、その理由を説明できる。</div>
           @else
           <div class="col-span-2 border border-gray-300 p-4 sm:p-6 bg-custom-blue font-bold">次回指導日</div>
@@ -163,11 +163,11 @@
           <x-icons.book />
           <p class="mt-2">英語文法</p>
         </a>
-        <a href="" class="block border-2 border-gray-200 p-8 font-bold rounded-lg shadow-lg flex flex-col items-center justify-center hover:bg-blue-100 hover:border-blue-500 hover:shadow-xl transition duration-300">
+        <a href="{{ route('student.sorry') }}" class="block border-2 border-gray-200 p-8 font-bold rounded-lg shadow-lg flex flex-col items-center justify-center hover:bg-blue-100 hover:border-blue-500 hover:shadow-xl transition duration-300">
           <x-icons.notebook />
           <p class="mt-2">英語長文</p>
         </a>
-        <a href="" class="block border-2 border-gray-200 p-8 font-bold rounded-lg shadow-lg flex flex-col items-center justify-center hover:bg-blue-100 hover:border-blue-500 hover:shadow-xl transition duration-300">
+        <a href="{{ route('student.sorry') }}" class="block border-2 border-gray-200 p-8 font-bold rounded-lg shadow-lg flex flex-col items-center justify-center hover:bg-blue-100 hover:border-blue-500 hover:shadow-xl transition duration-300">
           <x-icons.result />
           <p class="mt-2">成績</p>
         </a>

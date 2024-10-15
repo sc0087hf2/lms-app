@@ -10,7 +10,7 @@
         @endif
         <x-heading name="{{ $studentNames[$student->id] }}" />
         <!-- table -->
-        <div class="max-w-4xl mx-auto p-4">
+        <div class="max-w-4xl mx-auto py-4">
           <div class="grid grid-cols-1 md:grid-cols-7">
             @if($lessons[$student->id])
             <div class="col-span-2 border border-gray-300 p-2 sm:p-6 bg-custom-blue font-bold">次回指導日</div>

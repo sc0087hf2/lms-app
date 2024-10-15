@@ -21,16 +21,6 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
-//パーツの作成練習
-Route::get('/practice-component', function () {
-    return view('practice-component');
-});
-
-//レイアウトの作成練習
-Route::get('/practice-layout', function () {
-    return view('practice-layout');
-});
-
 require __DIR__ . '/auth.php';
 
 
@@ -117,9 +107,7 @@ Route::prefix('teacher')->middleware(['auth', 'teacher'])->name('teacher.')->gro
     Route::prefix('goals')->controller(GoalController::class)->name('goals.')->group(function () {
         Route::get('', 'index')->name('index');
         Route::get('{studentId}/create', 'create')->whereNumber('studentId')->name('create');
-        Route::get('{studentId}/create-goal-todo', 'createGoalTodo')->name('createGoalTodo');
         Route::post('store', 'store')->name('store');
-        Route::post('store-goal-todo', 'storeGoalTodo')->name('storeGoalTodo');
         Route::get('{goalId}/edit', 'edit')->name('edit');
         Route::post('{goalId}/update', 'update')->name('update');
         Route::post('{goalId}/achieve', 'achieve')->name('achieve'); //後で名前変える

@@ -102,7 +102,7 @@
               @endif
             </ul>
           </div>
-          <div class="col-span-2 border border-gray-300 p-4 sm:p-6 bg-custom-blue font-bold">宿題背景</div>
+          <div class="col-span-2 border border-gray-300 p-4 sm:p-6 bg-custom-blue font-bold">関連ToDo</div>
           <div class="col-span-5 border border-gray-300 p-4 sm:p-6">
             <ul>
               @if(isset($homework))
@@ -273,7 +273,7 @@
         </a>
         <a href="{{ route('teacher.showStudentInfo', ['studentId' => $studentId]) }}" class="block border-2 border-gray-200 p-8 font-bold rounded-lg shadow-lg flex flex-col items-center justify-center hover:bg-blue-100 hover:border-blue-500 hover:shadow-xl transition duration-300">
           <x-icons.boy />
-          <p class="mt-2">生徒詳細</p>
+          <p class="mt-2">生徒情報</p>
         </a>
       </div>
   </section>

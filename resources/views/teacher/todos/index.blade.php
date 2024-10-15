@@ -9,7 +9,7 @@
     </nav>
     <div class="flex sm:justify-between">
       <x-title subtitle="TODOS LIST" title="ToDo一覧" />
-      <x-add-button href="{{ route('teacher.todos.create') }}" name="ToDo" />
+      <!-- <x-add-button href="{{ route('teacher.todos.create') }}" name="ToDo" /> -->
     </div>
     <!-- table -->
     <div class="overflow-x-auto">

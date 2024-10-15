@@ -43,6 +43,7 @@ export default {
             },
             backgroundImage: {
                 'custom-gradient': 'linear-gradient(transparent 70%, #fff77c 30%)',
+                'custom-gradient2': 'linear-gradient(transparent 70%, #ACDFFF 30%)',
             },
             transitionDuration: {
                 '2000': '2000ms',

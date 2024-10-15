@@ -8,7 +8,7 @@
     </ol>
   </nav>
   <section>
-    <x-title subtitle="LIST OF GOALS" title="{{ $studentName }} 取り組み一覧" />
+    <h1 class="my-16 p-4 text-center text-blue-500 text-2xl sm:text-4xl font-bold"><span class="border-b-4 border-gray-200">{{ $studentName }} 取り組み一覧</span></h1>
     <div>
       @foreach($goals as $goal)
       <h2 class="mt-16 mb-4 text-center text-xl sm:text-2xl"><strong class="bg-custom-gradient">{{ $goal->goal }}</strong></h2>
@@ -19,26 +19,26 @@
           @endif
           <div class="max-w-4xl mx-auto p-4">
             <div class="grid grid-cols-1 md:grid-cols-3">
-              <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">取り組み状況</div>
+              <div class="col-span-1 border border-gray-300 p-2 sm:p-6 bg-custom-blue font-bold">取り組み状況</div>
               @if($goal->achievement_date)
               @if($goal->goal_deadline > $goal->achievement_date)
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">取り組み達成（テスト待ち）</div>
+              <div class="col-span-2 border border-gray-300 p-2 sm:p-6 font-normal">取り組み達成（テスト待ち）</div>
               @else
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">取り組み達成</div>
+              <div class="col-span-2 border border-gray-300 p-2 sm:p-6 font-normal">取り組み達成</div>
               @endif
               @else
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">取り組み中</div>
+              <div class="col-span-2 border border-gray-300 p-2 sm:p-6 font-normal">取り組み中</div>
               @endif
-              <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">目標背景</div>
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">{{ $goal->goal_background }}</div>
-              <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">取り組み開始日</div>
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">{{ \Carbon\Carbon::parse($goal->created_at)->format('Y月n月j日') }}</div>
+              <div class="col-span-1 border border-gray-300 p-2 sm:p-6 bg-custom-blue font-bold">目標背景</div>
+              <div class="col-span-2 border border-gray-300 p-2 sm:p-6 font-normal">{{ $goal->goal_background }}</div>
+              <div class="col-span-1 border border-gray-300 p-2 sm:p-6 bg-custom-blue font-bold">取り組み開始日</div>
+              <div class="col-span-2 border border-gray-300 p-2 sm:p-6 font-normal">{{ \Carbon\Carbon::parse($goal->created_at)->format('Y月n月j日') }}</div>
               @if($goal->achievement_date)
-              <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">取り組み達成日</div>
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">{{ \Carbon\Carbon::parse($goal->achievement_date)->format('Y月n月j日') }}</div>
+              <div class="col-span-1 border border-gray-300 p-2 sm:p-6 bg-custom-blue font-bold">取り組み達成日</div>
+              <div class="col-span-2 border border-gray-300 p-2 sm:p-6 font-normal">{{ \Carbon\Carbon::parse($goal->achievement_date)->format('Y月n月j日') }}</div>
               @endif
-              <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">達成済みToDo</div>
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8 font-normal">
+              <div class="col-span-1 border border-gray-300 p-2 sm:p-6 bg-custom-blue font-bold">達成済みToDo</div>
+              <div class="col-span-2 border border-gray-300 p-2 sm:p-6 font-normal">
                 <ul>
                   @foreach($todos[$goal->id] as $todo)
                   @if($todo->is_achievement === 1)
@@ -52,8 +52,8 @@
                   @endforeach
                 </ul>
               </div>
-              <div class="col-span-1 border border-gray-300 p-4 sm:p-8 bg-custom-blue font-bold">未達成ToDo</div>
-              <div class="col-span-2 border border-gray-300 p-4 sm:p-8">
+              <div class="col-span-1 border border-gray-300 p-2 sm:p-6 bg-custom-blue font-bold">未達成ToDo</div>
+              <div class="col-span-2 border border-gray-300 p-2 sm:p-6">
                 <ul>
                   @foreach($todos[$goal->id] as $todo)
                   @if($todo->is_achievement !== 1)
