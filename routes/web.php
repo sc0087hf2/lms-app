@@ -21,10 +21,12 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
+//パーツの作成練習
 Route::get('/practice-component', function () {
     return view('practice-component');
 });
 
+//レイアウトの作成練習
 Route::get('/practice-layout', function () {
     return view('practice-layout');
 });
