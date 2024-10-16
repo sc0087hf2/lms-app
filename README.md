@@ -21,15 +21,14 @@ MVCの概念を理解し、CRUDの実装/バリデーションの実装ができ
 ## サイトアクセス
 
 - URLは<a href="https://kateikyoshi-lms.com/">こちら</a>
-- ログイン情報
-<br />【指導者ユーザー】
-    -メールアドレス：teacher1@example.com　　パスワード:password123
-    -メールアドレス：teacher2@example.com　　パスワード:password123
-
-【生徒ユーザー】
-メールアドレス：student1@example.com　　パスワード:password123
-メールアドレス：student2@example.com　　パスワード:password123
-メールアドレス：student3@example.com　　パスワード:password123
-メールアドレス：student4@example.com　　パスワード:password123
+- 指導者ユーザーのログイン情報
+    - メールアドレス：teacher1@example.com　　パスワード:password123
+    - メールアドレス：teacher2@example.com　　パスワード:password123
+  
+- 生徒ユーザーのログイン情報
+    - メールアドレス：student1@example.com　　パスワード:password123
+    - メールアドレス：student2@example.com　　パスワード:password123
+    - メールアドレス：student3@example.com　　パスワード:password123
+    - メールアドレス：student4@example.com　　パスワード:password123
 
 サイト内で目標の作成やその他の書き込みは自由に行ってください。
