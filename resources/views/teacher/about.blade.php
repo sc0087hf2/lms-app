@@ -34,26 +34,26 @@
     <p class="sm:ml-8 sm:mb-4 text-base font-normal">目標設定や進捗管理は「ホーム > 生徒詳細画面」から行うことができます。生徒詳細画面で目標、ToDo、授業、宿題を追加・編集できる条件は以下の通りです。</p>
     <!-- table -->
     <div class="max-w-4xl mx-auto px-4 my-8">
-      <div class="grid grid-cols-1 md:grid-cols-4">
-        <div class="md:col-span-4 border border-gray-300 p-4 bg-custom-blue2 font-bold hidden md:block">目標の設定</div>
-        <div class="md:col-span-1 border border-gray-300 p-4 bg-custom-blue font-bold">目標の追加</div>
-        <div class="md:col-span-3 border border-gray-300 p-4 font-normal">取り組んでいる目標がない場合、新たな目標を追加できます。目標に対する取り組みが終わったら、「目標達成」ボタンを押すことで、新しい目標を追加することができます。</div>
-        <div class="md:col-span-1 border border-gray-300 p-4 bg-custom-blue font-bold">目標の編集</div>
-        <div class="md:col-span-3 border border-gray-300 p-4 font-normal">現在進行中の目標を編集できます。また取り組み終了後の「振り返り」は、目標の編集から行います。</div>
-        <div class="md:col-span-1 border border-gray-300 p-4 bg-custom-blue font-bold">ToDoの追加</div>
-        <div class="md:col-span-3 border border-gray-300 p-4 font-normal">進行中の目標に対して、ToDoを追加できます。</div>
-        <div class="md:col-span-1 border border-gray-300 p-4 bg-custom-blue font-bold">ToDoの編集</div>
-        <div class="md:col-span-3 border border-gray-300 p-4 font-normal">すでに設定されたToDoは、ToDo一覧から編集できます。</div>
-        <div class="md:col-span-4 p-4 font-bold hidden md:block"></div>
-        <div class="md:col-span-4 border border-gray-300 p-4 bg-custom-blue2 font-bold hidden md:block">進捗の管理</div>
-        <div class="md:col-span-1 border border-gray-300 p-4 bg-custom-blue font-bold">授業の追加</div>
-        <div class="md:col-span-3 border border-gray-300 p-4 font-normal">いつでも授業を追加できます。授業や宿題に対するフィードバックもここから追加します。</div>
-        <div class="md:col-span-1 border border-gray-300 p-4 bg-custom-blue font-bold">授業の編集</div>
-        <div class="md:col-span-3 border border-gray-300 p-4 font-normal">最新の授業日について編集できます。</div>
-        <div class="md:col-span-1 border border-gray-300 p-4 bg-custom-blue font-bold">宿題の追加</div>
-        <div class="md:col-span-3 border border-gray-300 p-4 font-normal">最新の授業日に対して宿題を追加できます。</div>
-        <div class="md:col-span-1 border border-gray-300 p-4 bg-custom-blue font-bold">宿題の編集</div>
-        <div class="md:col-span-3 border border-gray-300 p-4 font-normal"> 最新の授業日に対する宿題を編集できます。</div>
+      <div class="grid grid-cols-1 sm:grid-cols-4">
+        <div class="sm:col-span-4 border border-gray-300 p-4 bg-custom-blue2 font-bold hidden md:block">目標の設定</div>
+        <div class="sm:col-span-1 border border-gray-300 p-4 bg-custom-blue font-bold">目標の追加</div>
+        <div class="sm:col-span-3 border border-gray-300 p-4 font-normal">取り組んでいる目標がない場合、新たな目標を追加できます。目標に対する取り組みが終わったら、「目標達成」ボタンを押すことで、新しい目標を追加することができます。</div>
+        <div class="sm:col-span-1 border border-gray-300 p-4 bg-custom-blue font-bold">目標の編集</div>
+        <div class="sm:col-span-3 border border-gray-300 p-4 font-normal">現在進行中の目標を編集できます。また取り組み終了後の「振り返り」は、目標の編集から行います。</div>
+        <div class="sm:col-span-1 border border-gray-300 p-4 bg-custom-blue font-bold">ToDoの追加</div>
+        <div class="sm:col-span-3 border border-gray-300 p-4 font-normal">進行中の目標に対して、ToDoを追加できます。</div>
+        <div class="sm:col-span-1 border border-gray-300 p-4 bg-custom-blue font-bold">ToDoの編集</div>
+        <div class="sm:col-span-3 border border-gray-300 p-4 font-normal">すでに設定されたToDoは、ToDo一覧から編集できます。</div>
+        <div class="sm:col-span-4 p-4 font-bold hidden md:block"></div>
+        <div class="sm:col-span-4 border border-gray-300 p-4 bg-custom-blue2 font-bold hidden md:block">進捗の管理</div>
+        <div class="sm:col-span-1 border border-gray-300 p-4 bg-custom-blue font-bold">授業の追加</div>
+        <div class="sm:col-span-3 border border-gray-300 p-4 font-normal">いつでも授業を追加できます。授業や宿題に対するフィードバックもここから追加します。</div>
+        <div class="sm:col-span-1 border border-gray-300 p-4 bg-custom-blue font-bold">授業の編集</div>
+        <div class="sm:col-span-3 border border-gray-300 p-4 font-normal">最新の授業日について編集できます。</div>
+        <div class="sm:col-span-1 border border-gray-300 p-4 bg-custom-blue font-bold">宿題の追加</div>
+        <div class="sm:col-span-3 border border-gray-300 p-4 font-normal">最新の授業日に対して宿題を追加できます。</div>
+        <div class="sm:col-span-1 border border-gray-300 p-4 bg-custom-blue font-bold">宿題の編集</div>
+        <div class="sm:col-span-3 border border-gray-300 p-4 font-normal"> 最新の授業日に対する宿題を編集できます。</div>
       </div>
     </div>
     <p class="sm:ml-8 sm:mb-4 text-base font-normal">「目標、ToDo、授業、宿題」の編集は、サイドバーから各項目を選択して行うこともできます。
