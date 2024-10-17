@@ -8,7 +8,7 @@
   <h1 class="my-16 p-4 text-center text-blue-500 text-2xl sm:text-4xl font-bold"><span class="border-b-4 border-gray-200">家庭教師LMS</span></h1>
   <section class="mb-24">
     <x-title subtitle="ABOUT" title="家庭教師LMSについて" />
-    <p class="sm:ml-8 sm:mb-4 text-base sm:text-lg font-normal">家庭教師LMS（Learning Management System）とは、生徒の<strong class="border-b-2 border-yellow-500">目標管理</strong>や<strong class="border-b-2 border-yellow-500">学習進捗の管理</strong>、さらに私が独自の判断で選定した<strong class="border-b-2 border-yellow-500">生徒に役立ちそうな教材</strong>（作成中）を提供するシステムです。生徒の学習効果を高め、授業を円滑に進めるために作成しました。</p>
+    <p class="sm:ml-8 sm:mb-4 text-base sm:text-lg font-normal">家庭教師LMS（Learning Management System）とは、生徒の<strong class="border-b-2 border-yellow-500">目標管理</strong>や<strong class="border-b-2 border-yellow-500">学習進捗の管理</strong>、さらに<strong class="border-b-2 border-yellow-500">授業や宿題として使えそうな教材</strong>（作成中）を提供するシステムです。生徒の学習効果を高め、授業を円滑に進めるために作成しました。</p>
   </section>
   <section class="mb-24">
     <x-title subtitle="GOAL SETTING AND PROGRESS FLOW" title="目標設定・進捗管理の流れ" />
@@ -56,7 +56,7 @@
         <div class="sm:col-span-3 border border-gray-300 p-4 font-normal"> 最新の授業日に対する宿題を編集できます。</div>
       </div>
     </div>
-    <p class="sm:ml-8 sm:mb-4 text-base font-normal">「目標、ToDo、授業、宿題」の編集は、サイドバーから各項目を選択して行うこともできます。
+    <p class="sm:ml-8 sm:mb-4 text-base font-normal">「目標、ToDo、授業、宿題」の編集は、メニューの各項目を選択して行うこともできます。
 
     </p>
   </section>
