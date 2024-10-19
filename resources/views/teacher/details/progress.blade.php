@@ -85,6 +85,10 @@
             </div>
           </div>
         </div>
+        <!-- ページネーション -->
+        <div class="py-6">
+          {{ $goals->links('pagination::default') }}
+        </div>
         @endforeach
       </div>
   </section>

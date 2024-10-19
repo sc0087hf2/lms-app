@@ -82,7 +82,7 @@ class TeacherPageController extends Controller
         $student     = Student::with('user', 'goals.todos')->findOrFail($studentId);
         $studentId   = $student->id;
         $studentName = $student->user->last_name . $student->user->first_name;
-        $goals       = $student->goals->sortByDesc('created_at');
+        $goals       = $student->goals()->orderBy('created_at', 'desc')->paginate(4);
         $todos       = [];
         foreach ($goals as $goal) {
             $todos[$goal->id] = $goal->todos ? $goal->todos : [];
@@ -98,7 +98,7 @@ class TeacherPageController extends Controller
         $student     = Student::with('user', 'lessons.homework')->findOrFail($studentId);
         $studentId   = $student->id;
         $studentName = $student->user->last_name . ' ' . $student->user->first_name;
-        $lessons     = $student->lessons->sortByDesc('lesson_date');
+        $lessons = $student->lessons()->orderBy('lesson_date', 'desc')->paginate(4);
         $homework    = [];
         foreach ($lessons as $lesson) {
             $homework[$lesson->id] = $lesson->homework;

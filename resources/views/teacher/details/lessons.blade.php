@@ -40,6 +40,10 @@
           </div>
         </div>
       </div>
+      <!-- ページネーション -->
+      <div class="py-6">
+        {{ $lessons->links('pagination::default') }}
+      </div>
       @endforeach
       @else
       <p class="mt-16 text-center text-2xl">授業が登録されていません。</p>
