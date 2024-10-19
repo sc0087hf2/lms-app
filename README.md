@@ -1,4 +1,4 @@
-### 家庭教師 LMS (Learning Management System)
+### <a href="https://kateikyoshi-lms.com/">家庭教師 LMS (Learning Management System)</a>
 
 ## 概要
 
@@ -78,5 +78,6 @@ MVC モデルや CRUD 操作、リレーション、Eloquent ORM を用いたデ
     -   メールアドレス：student2@example.com　　パスワード : password123
     -   メールアドレス：student3@example.com　　パスワード : password123
     -   メールアドレス：student4@example.com　　パスワード : password123
+        <br />
         <br />
         サイト内で目標の作成やその他の書き込みは自由に行ってください。
