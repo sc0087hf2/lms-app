@@ -73,6 +73,10 @@ MVC モデルや CRUD 操作、リレーション、Eloquent ORM を用いたデ
 -   指導者ユーザーのログイン情報
     -   メールアドレス：teacher1@example.com　　パスワード : password123
     -   メールアドレス：teacher2@example.com　　パスワード : password123
--   生徒ユーザーのログイン情報 - メールアドレス：student1@example.com　　パスワード : password123 - メールアドレス：student2@example.com　　パスワード : password123 - メールアドレス：student3@example.com　　パスワード : password123 - メールアドレス：student4@example.com　　パスワード : password123
-    <br />
-    サイト内で目標の作成やその他の書き込みは自由に行ってください。
+-   生徒ユーザーのログイン情報
+    -   メールアドレス：student1@example.com　　パスワード : password123
+    -   メールアドレス：student2@example.com　　パスワード : password123
+    -   メールアドレス：student3@example.com　　パスワード : password123
+    -   メールアドレス：student4@example.com　　パスワード : password123
+        <br />
+        サイト内で目標の作成やその他の書き込みは自由に行ってください。
