@@ -31,7 +31,7 @@ MVC モデルや CRUD 操作、リレーション、Eloquent ORM を用いたデ
 -   過去の取り組みの閲覧
 -   過去の授業の閲覧
 -   教材の閲覧
-    -   英単語の閲覧（検索のみ実装）
+    -   英単語の閲覧
     -   英文法の閲覧（未実装）
     -   英文法のテスト（未実装）
     -   英長文の問題閲覧（未実装）
@@ -70,19 +70,17 @@ MVC モデルや CRUD 操作、リレーション、Eloquent ORM を用いたデ
 ## サイトアクセス
 
 -   URL は<a href="https://kateikyoshi-lms.com/">こちら</a>
--   指導者ユーザーのログイン情報 - メールアドレス：teacher1@example.com　　パスワード : password123（ユーザー名：中野輝美） - メールアドレス：teacher2@example.com　　パスワード : password123（ユーザー名：牧野あやね）
-    <<<<<<< HEAD
--   生徒ユーザーのログイン情報 - メールアドレス：student1@example.com　　パスワード : password123（ユーザー名：松下孝広） - メールアドレス：student2@example.com　　パスワード : password123（ユーザー名：斉藤謙宏） - メールアドレス：student3@example.com　　パスワード : password123（ユーザー名：徳山剛） - メールアドレス：student4@example.com　　パスワード : password123（ユーザー名：黒木竜二）
+-   指導者ユーザーのログイン情報
+    - メールアドレス：teacher1@example.com　　パスワード : password123（ユーザー名：中野輝美）
+    - メールアドレス：teacher2@example.com　　パスワード : password123（ユーザー名：牧野あやね）
+
+-   生徒ユーザーのログイン情報
+    - メールアドレス：student1@example.com　　パスワード : password123（ユーザー名：松下孝広）
+    - メールアドレス：student2@example.com　　パスワード : password123（ユーザー名：斉藤謙宏）
+    - メールアドレス：student3@example.com　　パスワード : password123（ユーザー名：徳山剛）
+    - メールアドレス：student4@example.com　　パスワード : password123（ユーザー名：黒木竜二）
 <br />
 <br />
 <p>指導者名　中野輝美に紐づいている生徒名は、松下孝広、斉藤謙宏です。指導者名　牧野あやねに紐づいている生徒名は、徳山剛、黒木竜二です。</p>
 <br />
 <p>サイト内で目標の作成やその他の書き込みは自由に行ってください。</p>
-=======
--   生徒ユーザーのログイン情報 - メールアドレス：student1@example.com　　パスワード : password123（ユーザー名：松下孝広） - メールアドレス：student2@example.com　　パスワード : password123（ユーザー名：斉藤謙宏） - メールアドレス：student3@example.com　　パスワード : password123（ユーザー名：徳山剛） - メールアドレス：student4@example.com　　パスワード : password123（ユーザー名：黒木竜二）
-<br />
-<p>指導者名　中野輝美に紐づいている生徒名は、松下孝広、斉藤謙宏です。<br />指導者名　牧野あやねに紐づいている生徒名は、徳山剛、黒木竜二です。</p>
-<br />
-<p>サイト内で目標の作成やその他の書き込みは自由に行ってください。</p>
-
-> > > > > > > eba940048c51b183acbdcd2f549c581db63fe994
