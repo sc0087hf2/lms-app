@@ -11,7 +11,7 @@ class StoreSentencePartQuizRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,10 @@ class StoreSentencePartQuizRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'grammar_id'   => ['required', 'exists:grammars,id'],
+            'reference_id' => ['required', 'exists:references,id'],
+            'en_sentence'  => ['required', 'string', 'max:1000'],
+            'ja_sentence'  => ['required', 'string', 'max:1000'],
         ];
     }
 }

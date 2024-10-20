@@ -24,6 +24,4 @@
       @endforeach
     </div>
   </div>
-  <script>
-  </script>
 </x-student-layout>

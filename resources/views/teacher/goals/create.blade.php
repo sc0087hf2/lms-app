@@ -21,7 +21,7 @@
           <div class="p-2 mb-2 w-full">
             <div class="relative">
               <label for="goal" class="leading-7 text-sm text-gray-600">目標（必須）</label>
-              <input type="text" id="goal" name="goal" value="{{ old('goal') }}" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              <input type="text" id="goal" name="goal" value="{{ old('goal') }}" placeholder="目標としているテストの点数を設定してください" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
             </div>
             @error('goal')
             <div class="alert alert-danger text-red-700">{{ $message }}</div>
@@ -31,7 +31,7 @@
           <div class="p-2 mb-2 w-full">
             <div class="relative">
               <label for="goal_background" class="leading-7 text-sm text-gray-600">目標背景（必須）</label>
-              <textarea id="goal_background" name="goal_background" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out">{{ old('goal_background') }}</textarea>
+              <textarea id="goal_background" name="goal_background" placeholder="外発的動機づけか内発的動機づけ、どちらでも構いません。目標を設定した背景や理由を記入してください。" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out">{{ old('goal_background') }}</textarea>
             </div>
             @error('goal_background')
             <div class="alert alert-danger text-red-700">{{ $message }}</div>

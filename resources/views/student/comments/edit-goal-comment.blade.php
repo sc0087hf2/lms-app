@@ -18,7 +18,7 @@
           <div class="p-2 mb-2 w-full">
             <div class="relative">
               <label for="student_comment" class="leading-7 text-sm text-gray-600">取り組み振り返り</label>
-              <textarea id="student_comment" name="student_comment" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out">{{ is_null(old('student_comment')) ? $goal->student_comment : old('student_comment') }}</textarea>
+              <textarea id="student_comment" name="student_comment" placeholder="良かった点や改善点を記述し、次回の取り組みに活かしてください" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out">{{ is_null(old('student_comment')) ? $goal->student_comment : old('student_comment') }}</textarea>
             </div>
             @error('student_comment')
             <div class="alert alert-danger text-red-700">{{ $message }}</div>

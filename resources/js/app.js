@@ -124,29 +124,30 @@ document.addEventListener('DOMContentLoaded', function() {
       // alert('少なくとも1つの宿題を残してください。');
     }
   }
+});
 
-  //単語　日本語表示/非表示切り替え
+document.addEventListener('DOMContentLoaded', function () {
   let isHidden = false; // 状態を追跡するフラグ
 
-  function toggleJaWords() {
-    const jaWordElements = document.querySelectorAll('.ja-word');
-    const toggleButton = document.getElementById('toggleButton');
-
-    if (isHidden) {
-      // 日本語を表示する
-      jaWordElements.forEach(element => {
-        element.style.display = ''; // 元の状態に戻す
-      });
-      toggleButton.textContent = '全ての日本語を非表示'; // ボタンテキストを変更
-    } else {
-      // 日本語を非表示にする
-      jaWordElements.forEach(element => {
-        element.style.display = 'none'; // 非表示にする
-      });
-      toggleButton.textContent = '全ての日本語を表示'; // ボタンテキストを変更
-    }
-    isHidden = !isHidden; // 状態を切り替える
-  }
-
+  // ボタンクリック時の処理を定義
+  const toggleButton = document.getElementById('toggleButton');
+  toggleButton.addEventListener('click', function () {
+      const jaWordElements = document.querySelectorAll('.ja-word');
+      if (isHidden) {
+          // 日本語を表示する
+          jaWordElements.forEach(element => {
+              element.style.display = ''; // 元に戻す
+          });
+          toggleButton.textContent = '全ての日本語を非表示'; // ボタンのテキストを変更
+      } else {
+          // 日本語を非表示にする
+          jaWordElements.forEach(element => {
+              element.style.display = 'none'; // 非表示にする
+          });
+          toggleButton.textContent = '全ての日本語を表示'; // ボタンのテキストを変更
+      }
+      isHidden = !isHidden; // 状態を切り替える
+  });
 });
+
 

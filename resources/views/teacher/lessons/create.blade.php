@@ -30,7 +30,7 @@
           <div class="p-2 mb-2 w-full">
             <div class="relative">
               <label for="lesson" class="leading-7 text-sm text-gray-600">授業内容（必須）</label>
-              <textarea id="lesson" name="lesson" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out">{{ old('lesson') }}</textarea>
+              <textarea id="lesson" name="lesson" placeholder="授業内容を記入してください" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out">{{ old('lesson') }}</textarea>
             </div>
           </div>
           @error('lesson')
@@ -50,7 +50,7 @@
           <div class="p-2 mb-2 w-full">
             <div class="relative">
               <label for="next_lesson" class="leading-7 text-sm text-gray-600">次回授業内容（必須）</label>
-              <textarea id="next_lesson" name="next_lesson" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out">{{ old('next_lesson') }}</textarea>
+              <textarea id="next_lesson" name="next_lesson" placeholder="次回予定している授業内容を記入してください" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out">{{ old('next_lesson') }}</textarea>
             </div>
           </div>
           @error('next_lesson')
@@ -60,7 +60,7 @@
           <div class="p-2 mb-8 w-full">
             <div class="relative">
               <label for="teacher_comment" class="leading-7 text-sm text-gray-600">授業後フィードバック</label>
-              <textarea id="teacher_comment" name="teacher_comment" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out">{{ old('comment') }}</textarea>
+              <textarea id="teacher_comment" placeholder="良かった点や改善点を捉え、アドバイスを記入してください" name="teacher_comment" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out">{{ old('comment') }}</textarea>
             </div>
           </div>
           @error('teacher_comment')

@@ -11,7 +11,7 @@ class StoreWordRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,11 @@ class StoreWordRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'part_of_speech_id' => ['required', 'exists:part_of_speeches,id'],
+            'en_word'           => ['required', 'string', 'max:255'],
+            'ja_word'           => ['required', 'string', 'max:255'],
+            'en_example'        => ['nullable', 'string', 'max:1000'],
+            'ja_example'        => ['nullable', 'string', 'max:1000'],
         ];
     }
 }

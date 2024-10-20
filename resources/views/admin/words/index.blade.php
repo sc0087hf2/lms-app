@@ -55,12 +55,6 @@
         </form>
       </div>
 
-      @php
-      function truncate($string, $length = 10) {
-      return mb_strlen($string) > $length ? mb_substr($string, 0, $length) . '...' : $string;
-      }
-      @endphp
-
       <!-- 英単語一覧の表示 -->
       <div class="w-full mx-auto">
         <table class="table-auto text-left whitespace-no-wrap">
@@ -77,7 +71,7 @@
             <tr>
               <td class="border-b-2 border-dashed border-gray-200 px-4 py-6">{{ $word->partOfSpeech->name }}</td>
               <td class="border-b-2 border-dashed border-gray-200 px-4 py-6">{{ $word->en_word }}</td>
-              <td class="border-b-2 border-dashed border-gray-200 px-4 py-6 hidden sm:table-cell">{{ truncate($word->ja_word) }}</td>
+              <td class="border-b-2 border-dashed border-gray-200 px-4 py-6 hidden sm:table-cell">{{ truncate($word->ja_word, 10) }}</td>
               <td class="border-b-2 border-dashed border-gray-200 px-4 py-6">
                 <a href="{{ route('admin.words.show', ['wordId' => $word->id]) }}">
                   <p class="bg-blue-900 text-white text-center px-2 py-2 hover:bg-blue-700 rounded">詳細</p>

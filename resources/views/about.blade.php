@@ -13,7 +13,7 @@
     </div>
     <div class="sm:mx-4">
       <h2 class="mb-2 font-bold text-base sm:text-xl"><span class="mr-2 text-yellow-500">①</span><strong class="bg-custom-gradient2">目標の設定</strong></h2>
-      <p class="mb-8 mx-8 sm:mx-12 text-base font-normal">まず、達成したいテストの点数や目標を具体的に明確化します。</p>
+      <p class="mb-8 mx-8 sm:mx-12 text-base font-normal">まず、達成したいテストの点数など目標を具体的に明確化します。</p>
       <h2 class="mb-2 font-bold text-base sm:text-xl"><span class="mr-2 text-yellow-500">②</span><strong class="bg-custom-gradient2">目標の細分化（ToDoリスト化）</strong></h2>
       <p class="mb-8 mx-8 sm:mx-12 text-base font-normal">設定した目標を細かく分けて、必要なタスクを洗い出し、ToDoリストに登録します。</p>
       <h2 class="mb-2 font-bold text-base sm:text-xl"><span class="mr-2 text-yellow-500">③</span><strong class="bg-custom-gradient2">進捗管理（授業・宿題）</strong></h2>

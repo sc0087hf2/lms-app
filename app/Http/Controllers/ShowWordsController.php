@@ -37,7 +37,7 @@ class ShowWordsController extends Controller
     public function category(int $categoryId)
     {
         $category = PartOfSpeech::with(['words'])->findOrFail($categoryId);
-        $words = $category->words;
+        $words = $category->words()->orderBy('en_word', 'asc')->get();
         return view('student.words.category', compact('category', 'words'));
     }
 }
