@@ -30,4 +30,14 @@ class ShowWordsController extends Controller
 
         return view('student.words.index', compact('partOfSpeeches'));
     }
+
+    /**
+     * 品詞など一覧表示
+     */
+    public function category(int $categoryId)
+    {
+        $category = PartOfSpeech::with(['words'])->findOrFail($categoryId);
+        $words = $category->words;
+        return view('student.words.category', compact('category', 'words'));
+    }
 }

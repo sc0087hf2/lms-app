@@ -185,6 +185,7 @@ Route::prefix('student')->middleware(['auth', 'student'])->name('student.')->gro
     //単語ページ
     Route::prefix('words')->controller(ShowWordsController::class)->name('words.')->group(function () {
         Route::get('', 'index')->name('index');
+        Route::get('{categoryId}/category', 'category')->name('category');
     });
 
     //文法ページ

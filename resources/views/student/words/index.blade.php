@@ -88,7 +88,7 @@
         <div class="max-w-4xl mx-auto">
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             @foreach($partOfSpeeches as $partOfSpeech)
-            <a href="{{ route('student.sorry') }}" class="border-2 border-gray-200 p-2 font-bold rounded-lg shadow-lg flex flex-col items-center justify-center">
+            <a href="{{ route('student.words.category', ['categoryId' => $partOfSpeech->id ]) }}" class="border-2 border-gray-200 p-2 font-bold rounded-lg shadow-lg flex flex-col items-center justify-center">
               <p class="p-2">{{ $partOfSpeech->name }}</p>
             </a>
             @endforeach
