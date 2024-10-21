@@ -26,7 +26,7 @@ class TodoController extends Controller
             })
             ->orderBy('created_at', 'desc')
             ->paginate(10);
-        $studentName = [];
+        $studentNames = [];
         foreach ($todos as $todo) {
             $studentNames[$todo->id] = $todo->goal->student->user->last_name . ' ' . $todo->goal->student->user->first_name;
         }
